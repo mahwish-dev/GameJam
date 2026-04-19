@@ -358,3 +358,6 @@ offset_right = -20.0
 offset_bottom = 68.0
 grow_horizontal = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="CheckPoint2" parent="." unique_id=1387782194 instance=ExtResource("5_alqfr")]
+position = Vector2(603, -107)
