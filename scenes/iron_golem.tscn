@@ -91,6 +91,8 @@ script = ExtResource("1_shi5l")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1334238323]
 scale = Vector2(0.7, 0.7)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=172822269]
 position = Vector2(-2.0408163, -18.367348)
@@ -103,7 +105,7 @@ scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ahly8")
 animation = &"walk"
 
-[node name="HealthBar" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
+[node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
 offset_left = -27.142857
 offset_top = -51.428574
 offset_right = 52.857143
