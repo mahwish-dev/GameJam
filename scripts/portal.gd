@@ -1,7 +1,9 @@
 extends Area2D
 
 func _ready():
-	body_entered.connect(_on_body_entered)
+	# Godot has already connected this via the Editor UI, 
+	# so we don't need to do it manually here.
+	pass
 
 func _on_body_entered(body):
 	# Move the print statement inside so the console doesn't get spammed by the floor/enemies
@@ -12,7 +14,7 @@ func _on_body_entered(body):
 		var next_scene = _get_next_scene()
 		
 		if next_scene != "":
-			get_tree().change_scene_to_file(next_scene)
+			get_tree().call_deferred("change_scene_to_file", next_scene)
 		else:
 			print("No next scene found!")
 
