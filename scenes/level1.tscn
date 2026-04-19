@@ -279,7 +279,7 @@ offset_top = -2.0
 offset_right = 734.672
 offset_bottom = 410.0
 
-[node name="Score" parent="Overlay" unique_id=1450848412 instance=ExtResource("9_jvkml")]
+[node name="Score" parent="Overlay" unique_id=1450848412 groups=["score_label"] instance=ExtResource("9_jvkml")]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
