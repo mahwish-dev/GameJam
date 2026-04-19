@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*uid://cevtyk7h6rx10"
 
+[global_group]
+
+player=""
+
 [input]
 
 jump={

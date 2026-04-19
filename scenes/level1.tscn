@@ -294,5 +294,5 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(88, 39)
 
 [node name="IronGolem" parent="." unique_id=308826891 instance=ExtResource("12_2ku1j")]
-position = Vector2(135.99998, 50)
+position = Vector2(233, 15)
 scale = Vector2(1, 1)
