@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dueig4w8m4uko"]
+
+[ext_resource type="Script" uid="uid://b02y30ihlyisc" path="res://scripts/minion.gd" id="1_b4arb"]
+[ext_resource type="Texture2D" uid="uid://xketvnkf25da" path="res://assets/sprites/candy-guy.png" id="2_1ddg2"]
+[ext_resource type="PackedScene" uid="uid://bb6mrkpa6jh75" path="res://scenes/health_bar.tscn" id="3_qqrhl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll15l"]
+atlas = ExtResource("2_1ddg2")
+region = Rect2(129, 192, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnthb"]
+atlas = ExtResource("2_1ddg2")
+region = Rect2(160, 192, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw2tu"]
+atlas = ExtResource("2_1ddg2")
+region = Rect2(191, 192, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3j7i"]
+atlas = ExtResource("2_1ddg2")
+region = Rect2(222, 192, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s41o6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll15l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnthb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw2tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3j7i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6cm8"]
+radius = 11.0
+
+[node name="Minion" type="CharacterBody2D" unique_id=1630537809]
+script = ExtResource("1_b4arb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=151986920]
+sprite_frames = SubResource("SpriteFrames_s41o6")
+frame_progress = 0.5453976
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797031369]
+shape = SubResource("CircleShape2D_o6cm8")
+
+[node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_qqrhl")]
+offset_top = -33.0
+offset_bottom = 4.142853
