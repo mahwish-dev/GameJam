@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cnikuho61tgcm"]
+
+[ext_resource type="Script" uid="uid://hfhupjajc2vy" path="res://scripts/check_point.gd" id="1_klegx"]
+[ext_resource type="Texture2D" uid="uid://nwr07tqur0qp" path="res://assets/sprites/fruit.png" id="2_7brbk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_klegx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx78p"]
+atlas = ExtResource("2_7brbk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r71g"]
+atlas = ExtResource("2_7brbk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smfx4"]
+atlas = ExtResource("2_7brbk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bt5rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xx78p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r71g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smfx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CheckPoint" type="Area2D" unique_id=92169392]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_klegx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=886641319]
+shape = SubResource("CircleShape2D_klegx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=931528096]
+sprite_frames = SubResource("SpriteFrames_bt5rj")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

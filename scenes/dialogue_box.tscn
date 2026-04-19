@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dtfb0227pc45q"]
+
+[ext_resource type="Script" uid="uid://tfdmuomfxwvt" path="res://scripts/dialogue_box2.gd" id="1_rc1id"]
+[ext_resource type="FontFile" uid="uid://dfd0c0e0xg0yf" path="res://assets/fonts/PixelOperator8.ttf" id="2_tm68y"]
+[ext_resource type="FontFile" uid="uid://52x218xb816c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_hvmm2"]
+
+[node name="DialogueBox" type="Control" unique_id=1305888784]
+layout_mode = 3
+anchor_right = 0.36400002
+anchor_bottom = 0.37500003
+offset_right = 733.672
+offset_bottom = 403.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rc1id")
+
+[node name="Panel" type="Panel" parent="." unique_id=1452917332]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -218.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel" unique_id=964373010]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 827.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("2_tm68y")
+text = "Guide Character
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1734588937]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 49.0
+offset_right = 1124.0
+offset_bottom = 89.0
+theme_override_fonts/normal_font = ExtResource("2_tm68y")
+theme_override_fonts/bold_font = ExtResource("3_hvmm2")
+bbcode_enabled = true
+text = "
+"

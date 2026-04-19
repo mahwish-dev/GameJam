@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://duq7x8xk8iweb"]
+
+[ext_resource type="Script" uid="uid://v1khdiwuo13p" path="res://scripts/texture_progress_bar.gd" id="1_8o6hb"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" unique_id=5108437]
+offset_right = 278.0
+offset_bottom = 40.0
+value = 100.0
+script = ExtResource("1_8o6hb")
