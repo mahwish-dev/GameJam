@@ -11,10 +11,10 @@ func take_damage(amount: int) -> void:
 	health -= amount
 	health = clamp(health, 0, max_health)
 	$HealthBarContainer/HealthBar.value = health
-	print("Slime took ", amount, " damage! HP: ", health, "/", max_health)
+	print("Golem took ", amount, " damage! HP: ", health, "/", max_health)
 	if health <= 0:
 		die()
 
 func die() -> void:
-	print("Slime died!")
+	print("Golem died!")
 	queue_free()
