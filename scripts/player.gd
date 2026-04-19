@@ -103,3 +103,6 @@ func die():
 	regen_timer = 0.0
 	global_position = Global.checkpoint_position
 	is_dead = false
+	
+	for trigger in get_tree().get_nodes_in_group("trigger"):
+		trigger.triggered = false

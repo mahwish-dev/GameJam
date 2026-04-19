@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="10_3w4mx"]
 [ext_resource type="Texture2D" uid="uid://cxb6bvfx7fihq" path="res://assets/sprites/day background.png" id="11_u068y"]
 [ext_resource type="PackedScene" uid="uid://ce1of275na2bf" path="res://scenes/iron_golem.tscn" id="12_2ku1j"]
+[ext_resource type="PackedScene" uid="uid://b45hp7yy4ss1w" path="res://scenes/area_2d.tscn" id="13_f31uk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tnpc"]
 texture = ExtResource("1_u3awl")
@@ -296,3 +297,6 @@ position = Vector2(88, 39)
 [node name="IronGolem" parent="." unique_id=308826891 instance=ExtResource("12_2ku1j")]
 position = Vector2(233, 15)
 scale = Vector2(1, 1)
+
+[node name="SpatialTrigger" parent="." unique_id=1966880099 groups=["trigger"] instance=ExtResource("13_f31uk")]
+position = Vector2(126, 32)

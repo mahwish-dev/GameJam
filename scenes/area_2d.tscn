@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b45hp7yy4ss1w"]
+
+[ext_resource type="Script" uid="uid://cj6k0xewqaqe1" path="res://scripts/area_2d.gd" id="1_svk5y"]
+[ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="2_nhxoo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ieuq"]
+radius = 20.024984
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa2l1"]
+atlas = ExtResource("2_nhxoo")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bphau"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa2l1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SpatialTrigger" type="Area2D" unique_id=1966880099]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_svk5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1725092671]
+shape = SubResource("CircleShape2D_5ieuq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1304593443]
+scale = Vector2(1.875, 1.875)
+sprite_frames = SubResource("SpriteFrames_bphau")

@@ -23,6 +23,7 @@ Global="*uid://cevtyk7h6rx10"
 
 player=""
 checkpoint=""
+trigger=""
 
 [input]
 
