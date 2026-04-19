@@ -22,6 +22,7 @@ Global="*uid://cevtyk7h6rx10"
 [global_group]
 
 player=""
+checkpoint=""
 
 [input]
 

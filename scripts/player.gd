@@ -24,8 +24,7 @@ func _ready():
 	health_bar.value = health
 	Global.checkpoint_position = global_position
 	await get_tree().process_frame
-	var checkpoint = get_node_or_null("../CheckPoint")
-	if checkpoint:
+	for checkpoint in get_tree().get_nodes_in_group("checkpoint"):
 		checkpoint.activated.connect(_on_checkpoint)
 
 func _physics_process(delta: float) -> void:
