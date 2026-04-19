@@ -58,11 +58,6 @@ scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_74cow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2107191665]
-<<<<<<< HEAD
-position = Vector2(1.1920929e-07, -14.285714)
-=======
-position = Vector2(-1.4285716, -14.285715)
->>>>>>> 2029ad3e4712ac14f8fafcae4440520be82855c1
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ahly8")
 animation = &"walk"
@@ -71,14 +66,4 @@ frame_progress = 0.32331645
 metadata/_edit_use_anchors_ = true
 
 [node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
-<<<<<<< HEAD
-offset_left = -28.571428
-offset_top = -48.57143
-offset_right = 51.428574
-offset_bottom = -8.57143
-=======
-offset_left = -37.142864
-offset_top = -47.14286
-offset_right = 42.857136
-offset_bottom = -14.285721
->>>>>>> 2029ad3e4712ac14f8fafcae4440520be82855c1
+
