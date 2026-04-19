@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="6_yqkch"]
 [ext_resource type="PackedScene" uid="uid://cj32o0h314nk" path="res://scenes/coin.tscn" id="7_6ep0u"]
 [ext_resource type="PackedScene" uid="uid://cmxmtpxxbklok" path="res://scenes/score.tscn" id="8_hrcei"]
+[ext_resource type="PackedScene" uid="uid://dtfb0227pc45q" path="res://scenes/dialogue_box.tscn" id="8_xa7n4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k3dv"]
 texture = ExtResource("1_if4l3")
@@ -306,12 +307,6 @@ position = Vector2(77, -7)
 [node name="Coin2" parent="." unique_id=138338147 instance=ExtResource("7_6ep0u")]
 position = Vector2(175, -7)
 
-[node name="Score" parent="." unique_id=1450848412 groups=["score_label"] instance=ExtResource("8_hrcei")]
-offset_left = 261.0
-offset_top = -121.0
-offset_right = 398.0
-offset_bottom = -98.0
-
 [node name="Coin3" parent="." unique_id=1038644782 instance=ExtResource("7_6ep0u")]
 position = Vector2(255, -7)
 
@@ -344,3 +339,22 @@ position = Vector2(137, -214)
 
 [node name="Coin13" parent="." unique_id=1203001807 instance=ExtResource("7_6ep0u")]
 position = Vector2(151, -218)
+
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=1841358533]
+
+[node name="DialogueBox" parent="Overlay" unique_id=1305888784 instance=ExtResource("8_xa7n4")]
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 734.672
+offset_bottom = 410.0
+
+[node name="Score" parent="Overlay" unique_id=1450848412 groups=["score_label"] instance=ExtResource("8_hrcei")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -319.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 68.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true

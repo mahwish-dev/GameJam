@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://f1vtq2n8083d"]
+
+[ext_resource type="PackedScene" uid="uid://dtfb0227pc45q" path="res://scenes/dialogue_box.tscn" id="1_r2eog"]
+[ext_resource type="PackedScene" uid="uid://cmxmtpxxbklok" path="res://scenes/score.tscn" id="2_sfd0e"]
+
+[node name="Overlay" type="CanvasLayer" unique_id=1832993209]
+
+[node name="DialogueBox" parent="." unique_id=1305888784 instance=ExtResource("1_r2eog")]
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 734.672
+offset_bottom = 410.0
+
+[node name="Score" parent="." unique_id=1450848412 groups=["score_label"] instance=ExtResource("2_sfd0e")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -319.0
+offset_top = 15.0
+offset_right = -20.0
+offset_bottom = 68.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
