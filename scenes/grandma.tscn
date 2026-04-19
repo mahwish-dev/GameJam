@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dehfe5ypu1xqy"]
+
+[ext_resource type="Texture2D" uid="uid://xketvnkf25da" path="res://assets/sprites/candy-guy.png" id="1_ksdnf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfwya"]
+atlas = ExtResource("1_ksdnf")
+region = Rect2(130, 128, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ae1h"]
+atlas = ExtResource("1_ksdnf")
+region = Rect2(161, 128, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxidy"]
+atlas = ExtResource("1_ksdnf")
+region = Rect2(192, 128, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t54p"]
+atlas = ExtResource("1_ksdnf")
+region = Rect2(223, 128, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lbv4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfwya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ae1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxidy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t54p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=484719049]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=783646621]
+sprite_frames = SubResource("SpriteFrames_lbv4p")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
