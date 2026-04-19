@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bb6mrkpa6jh75" path="res://scenes/health_bar.tscn" id="3_74cow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_74cow"]
-radius = 34.98542
+radius = 17.49271
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74cow"]
 atlas = ExtResource("2_shi5l")
@@ -58,7 +58,7 @@ scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_74cow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2107191665]
-position = Vector2(-1.4285715, -22.857143)
+position = Vector2(-1.4285716, -14.285715)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ahly8")
 animation = &"walk"
@@ -67,3 +67,7 @@ frame_progress = 0.41022563
 metadata/_edit_use_anchors_ = true
 
 [node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
+offset_left = -37.142864
+offset_top = -47.14286
+offset_right = 42.857136
+offset_bottom = -14.285721
