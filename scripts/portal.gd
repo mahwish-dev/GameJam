@@ -4,10 +4,13 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body):
-	print("portal touched by: ", body.name)
-	if body is CharacterBody2D:
+	# Move the print statement inside so the console doesn't get spammed by the floor/enemies
+	if body.is_in_group("player"):
+		print("portal touched by: ", body.name)
 		print("changing scene!")
+		
 		var next_scene = _get_next_scene()
+		
 		if next_scene != "":
 			get_tree().change_scene_to_file(next_scene)
 		else:

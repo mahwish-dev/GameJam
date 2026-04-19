@@ -292,7 +292,7 @@ shape = SubResource("WorldBoundaryShape2D_alqfr")
 position = Vector2(42, -8)
 
 [node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("6_yqkch")]
-position = Vector2(-49, -184)
+position = Vector2(95, -9)
 
 [node name="Platform4" parent="." unique_id=1173730347 instance=ExtResource("2_4038r")]
 position = Vector2(216, -146)

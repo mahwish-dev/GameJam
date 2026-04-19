@@ -82,10 +82,13 @@ func take_damage(amount: int) -> void:
 func _do_attack():
 	is_attacking = true
 	sprite.play("attack")
-	for area in attack_hitbox.get_overlapping_areas():
-		var parent = area.get_parent()
-		if parent.has_method("take_damage"):
-			parent.take_damage(attack_damage)
+	
+	# Look for CharacterBodies (like the Golem!) instead of Areas
+	for body in attack_hitbox.get_overlapping_bodies():
+		# Check if the body itself has the function, AND make sure the player doesn't hit themself!
+		if body.has_method("take_damage") and body != self:
+			body.take_damage(attack_damage)
+			
 	await sprite.animation_finished
 	is_attacking = false
 

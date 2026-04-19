@@ -161,19 +161,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
-radius = 6.0
+radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
-size = Vector2(16.75, 7)
+size = Vector2(20.75, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=31070966 groups=["player"]]
 z_index = 99
 collision_layer = 2
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1473541084]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1473541084 groups=["player"]]
 position = Vector2(0, -9)
-scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"attack"
 autoplay = "idle"
@@ -181,7 +180,6 @@ frame = 5
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981946467]
-position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_fjrip")
 
 [node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_qhqgy")]
@@ -194,5 +192,5 @@ scale = Vector2(0.3, 0.3)
 [node name="AttackHitbox" type="Area2D" parent="." unique_id=1586188186]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=1498709215]
-position = Vector2(2.625, -7)
+position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_dqkch")
