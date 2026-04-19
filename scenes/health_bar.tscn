@@ -16,10 +16,11 @@ atlas = ExtResource("1_1bvlm")
 region = Rect2(0, 16.345293, 80, 15.013002)
 
 [node name="HealthBarContainer" type="CenterContainer" unique_id=1110256349]
-offset_left = -41.0
-offset_top = -20.0
-offset_right = 39.0
-offset_bottom = 20.0
+offset_left = -28.0
+offset_top = -13.000002
+offset_right = 52.0
+offset_bottom = 24.14285
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_y3kqx")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=2028159641]

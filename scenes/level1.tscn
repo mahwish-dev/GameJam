@@ -256,7 +256,7 @@ position = Vector2(457, -55)
 
 [node name="Killzone" parent="." unique_id=981953008 instance=ExtResource("5_i8kv5")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=97180783]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone" unique_id=97180783]
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="Slime" parent="." unique_id=1720144357 instance=ExtResource("6_dxn3v")]
