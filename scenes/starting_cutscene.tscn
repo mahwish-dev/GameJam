@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://c1tuwd7y7r3h2"]
 
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_iuwd2"]
+[ext_resource type="Script" uid="uid://ctyib7i6mopv7" path="res://scripts/starting_cutscene.gd" id="1_kon06"]
 [ext_resource type="Texture2D" uid="uid://cxb6bvfx7fihq" path="res://assets/sprites/day background.png" id="2_atiew"]
 [ext_resource type="PackedScene" uid="uid://xjt0nq2pfdwo" path="res://scenes/chocolate_guide.tscn" id="3_517xa"]
 [ext_resource type="PackedScene" uid="uid://cibdwssymquub" path="res://scenes/kid.tscn" id="4_atiew"]
+[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="5_517xa"]
+[ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="7_j57sh"]
+[ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="8_j57sh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oktqt"]
 texture = ExtResource("1_iuwd2")
@@ -168,6 +172,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_oktqt")
 
 [node name="Node2D" type="Node2D" unique_id=2087356101]
+script = ExtResource("1_kon06")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1401546776]
 position = Vector2(-101.99988, -5)
@@ -183,9 +188,32 @@ position = Vector2(619.0001, 269)
 scale = Vector2(0.6247241, 0.491453)
 texture = ExtResource("2_atiew")
 
-[node name="Guide" parent="." unique_id=867849128 instance=ExtResource("3_517xa")]
-position = Vector2(-28, 28)
-
 [node name="Kid" parent="." unique_id=1817673989 instance=ExtResource("4_atiew")]
-position = Vector2(483, 33)
+position = Vector2(476, 33)
 scale = Vector2(0.7, 0.7)
+
+[node name="Kid2" parent="." unique_id=796381861 instance=ExtResource("4_atiew")]
+position = Vector2(541.9999, 33)
+scale = Vector2(0.7, 0.7)
+
+[node name="Kid3" parent="." unique_id=1721680039 instance=ExtResource("4_atiew")]
+position = Vector2(524.9999, 33)
+scale = Vector2(0.7, 0.7)
+
+[node name="Kid4" parent="." unique_id=379838334 instance=ExtResource("4_atiew")]
+position = Vector2(508.9999, 33)
+scale = Vector2(0.7, 0.7)
+
+[node name="Guide" parent="." unique_id=867849128 instance=ExtResource("3_517xa")]
+position = Vector2(114, 29)
+
+[node name="Player" parent="." unique_id=31070966 instance=ExtResource("5_517xa")]
+position = Vector2(87, 38)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1256091453]
+zoom = Vector2(4, 4)
+
+[node name="Overlay" parent="." unique_id=1832993209 instance=ExtResource("7_j57sh")]
+
+[node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("8_j57sh")]
+position = Vector2(690, 34)
