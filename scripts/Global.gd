@@ -1,12 +1,7 @@
 extends Node
 
-var checkpoint_position = Vector2.ZERO
+# The two separate pockets!
+var coins: int = 0
+var ingots: int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var checkpoint_position: Vector2 = Vector2.ZERO

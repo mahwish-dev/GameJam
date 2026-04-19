@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ce1of275na2bf"]
 
 [ext_resource type="Script" uid="uid://ddmso4fft6beg" path="res://scripts/iron_golem.gd" id="1_shi5l"]
+[ext_resource type="PackedScene" uid="uid://bujl5leuu5pcj" path="res://scenes/chocolate_ingot.tscn" id="2_2snrp"]
 [ext_resource type="Texture2D" uid="uid://n3a36gea1s0y" path="res://assets/sprites/Golem_Full.png" id="2_shi5l"]
 [ext_resource type="PackedScene" uid="uid://bb6mrkpa6jh75" path="res://scenes/health_bar.tscn" id="3_74cow"]
 
@@ -135,6 +136,7 @@ animations = [{
 [node name="IronGolem" type="CharacterBody2D" unique_id=964448581]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_shi5l")
+loot_scene = ExtResource("2_2snrp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=172822269]
 position = Vector2(-1.4285712, -12.857142)
@@ -146,7 +148,7 @@ position = Vector2(-1.4285716, -14.285716)
 sprite_frames = SubResource("SpriteFrames_ahly8")
 animation = &"walk"
 autoplay = "walk"
-frame_progress = 0.9359988
+frame_progress = 0.22323577
 metadata/_edit_use_anchors_ = true
 
 [node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]

@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# --- NEW: Slot for the ingot! ---
+@export var loot_scene: PackedScene 
+
 var max_health = 100
 var health = 100
 
@@ -63,6 +66,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 		move_and_slide()
+
 func _attack() -> void:
 	can_attack = false
 	is_attacking = true
@@ -81,7 +85,7 @@ func _attack() -> void:
 	# Stop attacking so he can move again
 	is_attacking = false
 	
-	# 4. Wait 5 seconds for the cooldown before he can attack again
+	# 4. Wait 2 seconds for the cooldown before he can attack again
 	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
 	can_attack = true
 
@@ -95,4 +99,12 @@ func take_damage(amount: int) -> void:
 
 func die() -> void:
 	print("Golem goes to sleep!")
+	
+	# --- NEW: Drop the loot! ---
+	if loot_scene != null:
+		var loot = loot_scene.instantiate()
+		loot.global_position = global_position
+		# Safely drop it into the main level
+		get_parent().call_deferred("add_child", loot)
+		
 	queue_free()

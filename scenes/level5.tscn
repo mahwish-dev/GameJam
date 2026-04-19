@@ -209,10 +209,13 @@ position = Vector2(-138, -60)
 shape = SubResource("WorldBoundaryShape2D_got4s")
 
 [node name="CheckPoint" parent="." unique_id=92169392 instance=ExtResource("5_thmvh")]
-position = Vector2(42, -8)
-
-[node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("6_54swg")]
-position = Vector2(632, -74)
+position = Vector2(66, -7)
 
 [node name="IronGolem" parent="." unique_id=964448581 instance=ExtResource("7_teump")]
 position = Vector2(119, -4)
+
+[node name="Portal2" parent="." unique_id=152038252 instance=ExtResource("6_54swg")]
+position = Vector2(474, -132)
+
+[node name="IronGolem2" parent="." unique_id=180207583 instance=ExtResource("7_teump")]
+position = Vector2(220, -6)

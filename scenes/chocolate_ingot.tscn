@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bujl5leuu5pcj"]
+
+[ext_resource type="Script" uid="uid://cx5owmmmiicmu" path="res://scripts/chocolate_ingot.gd" id="1_f4wgc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2p72b"]
+load_path = "res://.godot/imported/spritesheet_cheese.png-8b5e409a659ca37541a771b7be3e8d2d.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10k5r"]
+radius = 8.0
+
+[node name="ChocolateIngot" type="Area2D" unique_id=1555120385]
+collision_mask = 2
+script = ExtResource("1_f4wgc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1019873409]
+texture = SubResource("CompressedTexture2D_2p72b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438560223]
+shape = SubResource("CircleShape2D_10k5r")
