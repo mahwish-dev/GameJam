@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ddmso4fft6beg" path="res://scripts/iron_golem.gd" id="1_shi5l"]
 [ext_resource type="Texture2D" uid="uid://n3a36gea1s0y" path="res://assets/sprites/Golem_Full.png" id="2_shi5l"]
+[ext_resource type="PackedScene" uid="uid://bb6mrkpa6jh75" path="res://scenes/health_bar.tscn" id="3_74cow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_74cow"]
 radius = 34.98542
@@ -64,3 +65,5 @@ animation = &"walk"
 autoplay = "walk"
 frame_progress = 0.41022563
 metadata/_edit_use_anchors_ = true
+
+[node name="HealthBarContainer" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
