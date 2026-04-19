@@ -5,6 +5,8 @@ const SPEED = 120.0
 const JUMP_VELOCITY = -270.0
 @onready var sprite = $AnimatedSprite2D
 
+var attack_damage = 25
+var is_attacking = false
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -45,3 +47,18 @@ func _on_checkpoint(pos):
 
 func die():
 	global_position = Global.checkpoint_position
+	
+func _do_attack():
+	is_attacking = true
+	sprite.play("attack")
+	$AttackHitbox/CollisionShape2D.disabled = false
+
+	# Deal damage to anything in hitbox right now
+	for body in attack_hitbox.get_overlapping_bodies():
+		if body.has_method("take_damage"):
+			body.take_damage(attack_damage)
+
+	# Wait for animation to finish then reset
+	await sprite.animation_finished
+	$AttackHitbox/CollisionShape2D.disabled = true
+	is_attacking = false

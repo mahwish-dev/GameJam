@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_4038r"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="4_2k3dv"]
 [ext_resource type="PackedScene" uid="uid://cnikuho61tgcm" path="res://scenes/check_point.tscn" id="5_alqfr"]
+[ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="6_yqkch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k3dv"]
 texture = ExtResource("1_if4l3")
@@ -208,3 +209,6 @@ shape = SubResource("WorldBoundaryShape2D_alqfr")
 
 [node name="CheckPoint" parent="." unique_id=92169392 instance=ExtResource("5_alqfr")]
 position = Vector2(42, -8)
+
+[node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("6_yqkch")]
+position = Vector2(632, -74)

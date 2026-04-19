@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://ce1of275na2bf"]
+
+[ext_resource type="Script" uid="uid://ddmso4fft6beg" path="res://scripts/iron_golem.gd" id="1_shi5l"]
+[ext_resource type="Texture2D" uid="uid://xketvnkf25da" path="res://assets/sprites/candy-guy.png" id="1_snqqn"]
+[ext_resource type="PackedScene" uid="uid://bb6mrkpa6jh75" path="res://scenes/health_bar.tscn" id="3_74cow"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_74cow"]
+radius = 15.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shi5l"]
+atlas = ExtResource("1_snqqn")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74cow"]
+atlas = ExtResource("1_snqqn")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2snrp"]
+atlas = ExtResource("1_snqqn")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ba50"]
+atlas = ExtResource("1_snqqn")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahly8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shi5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74cow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2snrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ba50")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="IronGolem" type="Node2D" unique_id=308826891]
+script = ExtResource("1_shi5l")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1334238323]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=172822269]
+shape = SubResource("CircleShape2D_74cow")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2107191665]
+sprite_frames = SubResource("SpriteFrames_ahly8")
+animation = &"walk"
+
+[node name="HealthBar" parent="." unique_id=1110256349 instance=ExtResource("3_74cow")]
+offset_left = -40.0
+offset_top = -45.0
+offset_right = 40.0
+offset_bottom = -5.0
