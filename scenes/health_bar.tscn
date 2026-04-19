@@ -24,7 +24,7 @@ script = ExtResource("1_y3kqx")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=2028159641]
 layout_mode = 2
-value = 50.0
+value = 100.0
 texture_under = SubResource("AtlasTexture_y3kqx")
 texture_over = SubResource("AtlasTexture_6opq1")
 texture_progress = SubResource("AtlasTexture_tujlf")

@@ -1,11 +1,11 @@
-extends TextureProgressBar
+extends CenterContainer
 
 var max_health = 100
 var health = 100
 
-func _ready():
-	$HealthBarContainer/HealthBar.max_value = max_health
-	$HealthBarContainer/HealthBar.value = health
+#func _ready():
+	#$HealthBarContainer/HealthBar.max_value = max_health
+	#$HealthBarContainer/HealthBar.value = health
 
 func take_damage(amount: int):
 	health -= amount
@@ -18,5 +18,5 @@ func die():
 	print("Slime died!")
 	queue_free()
 
-func _process():
+#func _process():
 	
