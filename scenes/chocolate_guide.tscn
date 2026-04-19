@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://xjt0nq2pfdwo"]
+
+[ext_resource type="Texture2D" uid="uid://cc542qxhl44uw" path="res://assets/sprites/guide1.png" id="1_aicuk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2al8f"]
+atlas = ExtResource("1_aicuk")
+region = Rect2(0, 129, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1evbf"]
+atlas = ExtResource("1_aicuk")
+region = Rect2(32, 129, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h80w8"]
+atlas = ExtResource("1_aicuk")
+region = Rect2(64, 129, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v62hb"]
+atlas = ExtResource("1_aicuk")
+region = Rect2(96, 129, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5kid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2al8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1evbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h80w8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v62hb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Guide" type="CharacterBody2D" unique_id=867849128]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=336568262]
+sprite_frames = SubResource("SpriteFrames_u5kid")
+animation = &"walk"
