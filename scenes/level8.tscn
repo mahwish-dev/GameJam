@@ -247,9 +247,9 @@ position = Vector2(1026, -191)
 position = Vector2(1006, -190)
 
 [node name="SpatialTrigger" parent="." unique_id=1966880099 groups=["trigger"] instance=ExtResource("9_1kdyy")]
-position = Vector2(1146, -183)
+position = Vector2(1177, -183)
 scale = Vector2(0.5, 0.5)
-dialogue_lines = Array[String](["where", "whe", "y"])
+dialogue_lines = Array[String]([])
 
 [node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("6_h6dii")]
 position = Vector2(1433, -189)

@@ -20,6 +20,7 @@ func _ready() -> void:
 
 func _on_trigger(trigger_id: String) -> void:
 	if trigger_id == "kids_scatter":
+		
 		await _kids_scatter()
 
 func say(speaker: String, text: String) -> void:
@@ -67,14 +68,19 @@ func _kids_scatter() -> void:
 	player.set_physics_process(false)
 	player.is_dead = true
 
+
+	# Player animation to idle
+	
+	var sprite = player.get_node("AnimatedSprite2D")
+	sprite.play("idle")
 	# Kids run off in different directions
 	var far_right = player.global_position.x + 500
 	var far_left = player.global_position.x - 500
-	move_character(kid, Vector2(far_right, kid.global_position.y), 1.2)
+	move_character(kid, Vector2(far_right, kid.global_position.y), 3)
 	await get_tree().create_timer(0.15).timeout
-	move_character(kid_2, Vector2(far_right, kid_2.global_position.y), 1.0)
+	move_character(kid_2, Vector2(far_right, kid_2.global_position.y), 3)
 	await get_tree().create_timer(0.15).timeout
-	await move_character(kid_3, Vector2(far_left, kid_3.global_position.y), 1.2)
+	move_character(kid_3, Vector2(far_left, kid_3.global_position.y), 3)
 
 	await get_tree().create_timer(0.3).timeout
 
