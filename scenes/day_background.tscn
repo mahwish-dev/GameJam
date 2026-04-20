@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c05y8106ujmfm"]
+
+[ext_resource type="Texture2D" uid="uid://cxb6bvfx7fihq" path="res://assets/sprites/day background.png" id="1_wwvwx"]
+
+[node name="DayBackground" type="Sprite2D" unique_id=1197791785]
+z_index = -1
+scale = Vector2(0.6247241, 0.491453)
+texture = ExtResource("1_wwvwx")
