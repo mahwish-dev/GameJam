@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bxsvjpqy03mpi"]
+
+[ext_resource type="Texture2D" uid="uid://bc08hd5t368vs" path="res://assets/sprites/Title-Recovered.png" id="1_ep5rh"]
+[ext_resource type="Script" uid="uid://csbax6nv2up4q" path="res://scripts/loading_screen.gd" id="1_hprjd"]
+
+[node name="Loading Screen" type="Node2D" unique_id=954555933]
+script = ExtResource("1_hprjd")
+
+[node name="TitleRecovered" type="Sprite2D" parent="." unique_id=1341179216]
+position = Vector2(574, 323)
+texture = ExtResource("1_ep5rh")

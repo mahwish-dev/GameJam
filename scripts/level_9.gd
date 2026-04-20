@@ -48,6 +48,7 @@ func play_cutscene() -> void:
 	# Enter the scene — player walks in
 	await get_tree().create_timer(1.0).timeout
 	await move_character(player, Vector2(320, player.global_position.y), 3.0)
+	await move_character(guide, Vector2(300, guide.global_position.y), 3.0)
 
 	# Player looks around, stops
 	await get_tree().create_timer(0.5).timeout
@@ -60,7 +61,8 @@ func play_cutscene() -> void:
 	await say('Guide', '"It\'s nothing. Just ruins. We need to leave. Now."')
 
 	# Player looks further, steps forward
-	await move_character(player, Vector2(360, player.global_position.y), 2.0)
+	move_character(player, Vector2(360, player.global_position.y), 2.0)
+	await move_character(guide, Vector2(340, guide.global_position.y), 3.0)
 
 	# Kids run across while player observes
 	player.get_node("AnimatedSprite2D").play("idle")
@@ -74,7 +76,8 @@ func play_cutscene() -> void:
 	await say('Guide', '"Listen to me, kid, we cannot be down here!"')
 
 	# Player turns away, steps forward defiantly
-	await move_character(player, Vector2(390, player.global_position.y), 1.0)
+	move_character(player, Vector2(390, player.global_position.y), 1.0)
+	await move_character(guide, Vector2(370, guide.global_position.y), 1.0)
 	player.get_node("AnimatedSprite2D").flip_h = false
 
 	# Player: "I\'m not going anywhere..."
@@ -91,7 +94,8 @@ func play_cutscene() -> void:
 	await say('Guide', '"And those golems? They aren\'t monsters. They\'ve been the protectors of our underground tribe for centuries. Now, they\'re hunted down just to harvest their chocolate."')
 
 	# Player steps back shocked
-	await move_character(player, Vector2(350, player.global_position.y), 0.8)
+	move_character(player, Vector2(350, player.global_position.y), 0.8)
+	await move_character(guide, Vector2(330, guide.global_position.y), 1.0)
 	player.get_node("AnimatedSprite2D").flip_h = true
 
 	# Player: "That\'s awful..."
@@ -107,7 +111,8 @@ func play_cutscene() -> void:
 	await say('Guide', '"I am so sorry, kid. I really didn\'t want it to come to this."')
 
 	# Player steps back alarmed
-	await move_character(player, Vector2(330, player.global_position.y), 0.5)
+	move_character(player, Vector2(330, player.global_position.y), 0.5)
+	await move_character(guide, Vector2(300, guide.global_position.y), 1.0)
 	player.get_node("AnimatedSprite2D").flip_h = true
 
 	# Player: "You don\'t have to do this!"

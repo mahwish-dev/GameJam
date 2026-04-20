@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="4_wlg8d"]
 [ext_resource type="PackedScene" uid="uid://ce1of275na2bf" path="res://scenes/iron_golem.tscn" id="5_p1wii"]
 [ext_resource type="PackedScene" uid="uid://cibdwssymquub" path="res://scenes/kid.tscn" id="6_0ciq4"]
+[ext_resource type="PackedScene" uid="uid://xjt0nq2pfdwo" path="res://scenes/chocolate_guide.tscn" id="8_dbux4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdvry"]
 texture = ExtResource("1_sjxv6")
@@ -216,3 +217,6 @@ position = Vector2(528, -16)
 position = Vector2(508, -15)
 
 [node name="Overlay" parent="." unique_id=1832993209 instance=ExtResource("4_wlg8d")]
+
+[node name="Guide" parent="." unique_id=867849128 instance=ExtResource("8_dbux4")]
+position = Vector2(64, -14)
