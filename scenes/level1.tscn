@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dfn2vw2lesmwg"]
 
+[ext_resource type="Script" uid="uid://wi3gprt01i35" path="res://scripts/level_1.gd" id="1_2ku1j"]
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_u3awl"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="3_f31uk"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="10_3w4mx"]
 [ext_resource type="PackedScene" uid="uid://cibdwssymquub" path="res://scenes/kid.tscn" id="10_u3awl"]
 [ext_resource type="Texture2D" uid="uid://cxb6bvfx7fihq" path="res://assets/sprites/day background.png" id="11_u068y"]
+[ext_resource type="PackedScene" uid="uid://b45hp7yy4ss1w" path="res://scenes/area_2d.tscn" id="13_f31uk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_conm7"]
 texture = ExtResource("1_u3awl")
@@ -216,6 +218,7 @@ _data = {
 distance = -118.0
 
 [node name="Level1" type="Node2D" unique_id=531602447]
+script = ExtResource("1_2ku1j")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1121364162]
 tile_set = SubResource("TileSet_lbhrr")
@@ -266,6 +269,11 @@ shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="CheckPoint" parent="." unique_id=92169392 instance=ExtResource("7_14jow")]
 position = Vector2(411, -56)
+
+[node name="SpatialTrigger" parent="." unique_id=1966880099 groups=["trigger"] instance=ExtResource("13_f31uk")]
+position = Vector2(907.00006, -56)
+scale = Vector2(0.6, 0.6)
+trigger_id = "kids_scatter"
 
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=439627274]
 
