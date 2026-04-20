@@ -1,12 +1,15 @@
-[gd_scene format=3 uid="uid://bw8orm38ndaar"]
+[gd_scene format=3 uid="uid://1rmafaahyary"]
 
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_6lxtr"]
+[ext_resource type="Script" uid="uid://d0fvivp7w51fx" path="res://scripts/level_5.gd" id="1_v4gm1"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_b72m1"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="3_5mhml"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="4_rupth"]
 [ext_resource type="PackedScene" uid="uid://cnikuho61tgcm" path="res://scenes/check_point.tscn" id="5_6qt4k"]
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="6_fh4ka"]
 [ext_resource type="PackedScene" uid="uid://ce1of275na2bf" path="res://scenes/iron_golem.tscn" id="7_b72m1"]
+[ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="9_g54xt"]
+[ext_resource type="PackedScene" uid="uid://b45hp7yy4ss1w" path="res://scenes/area_2d.tscn" id="10_7pj42"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qewby"]
 texture = ExtResource("1_6lxtr")
@@ -174,6 +177,7 @@ sources/0 = SubResource("TileSetAtlasSource_qewby")
 distance = -54.0
 
 [node name="Node2D" type="Node2D" unique_id=1390614243]
+script = ExtResource("1_v4gm1")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=430601072]
 tile_set = SubResource("TileSet_bradm")
@@ -217,5 +221,10 @@ position = Vector2(632, -74)
 [node name="IronGolem" parent="." unique_id=308826891 instance=ExtResource("7_b72m1")]
 position = Vector2(160, -17)
 
-[node name="Portal2" parent="." unique_id=1503788137 instance=ExtResource("6_fh4ka")]
-position = Vector2(69, -9)
+[node name="Overlay" parent="." unique_id=1832993209 instance=ExtResource("9_g54xt")]
+
+[node name="SpatialTrigger" parent="." unique_id=1966880099 groups=["trigger"] instance=ExtResource("10_7pj42")]
+position = Vector2(581, -68)
+scale = Vector2(0.3, 0.3)
+dialogue_lines = Array[String]([])
+trigger_id = "before portal"

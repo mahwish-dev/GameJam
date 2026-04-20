@@ -100,6 +100,11 @@ func take_damage(amount: int) -> void:
 func die() -> void:
 	print("Golem goes to sleep!")
 	
+	for trigger in get_tree().get_nodes_in_group("trigger"):
+		if trigger.has_signal("triggered_signal"):
+			trigger.triggered_signal.emit("golem_defeated")
+			break
+	
 	# --- NEW: Drop the loot! ---
 	if loot_scene != null:
 		var loot = loot_scene.instantiate()

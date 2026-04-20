@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_u3awl"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_2ku1j"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="3_f31uk"]
-[ext_resource type="PackedScene" uid="uid://c05y8106ujmfm" path="res://scenes/day_background.tscn" id="3_gnai3"]
+[ext_resource type="PackedScene" path="res://scenes/day_background.tscn" id="3_gnai3"]
 [ext_resource type="PackedScene" uid="uid://cj32o0h314nk" path="res://scenes/coin.tscn" id="4_gnai3"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="5_i8kv5"]
 [ext_resource type="PackedScene" uid="uid://cnikuho61tgcm" path="res://scenes/check_point.tscn" id="7_14jow"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxmtpxxbklok" path="res://scenes/score.tscn" id="9_jvkml"]
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="10_3w4mx"]
 [ext_resource type="PackedScene" uid="uid://cibdwssymquub" path="res://scenes/kid.tscn" id="10_u3awl"]
-[ext_resource type="PackedScene" path="res://scenes/area_2d.tscn" id="13_f31uk"]
+[ext_resource type="PackedScene" uid="uid://b45hp7yy4ss1w" path="res://scenes/area_2d.tscn" id="13_f31uk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_conm7"]
 texture = ExtResource("1_u3awl")

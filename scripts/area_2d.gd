@@ -4,6 +4,7 @@ signal triggered_signal(id: String)
 
 @export var dialogue_lines: Array[String] = [
 	"This is a trigger dialogue!",
+	"It only shows once."
 ]
 @export var trigger_id: String = "cutscene_1"
 
@@ -20,7 +21,7 @@ func _on_body_entered(body):
 		triggered = true
 		if dialogue_lines.size() > 0:
 			var dialogue_box = get_tree().current_scene.get_node("Overlay/DialogueBox")
-			_show_dialogue(dialogue_box)
+			await _show_dialogue(dialogue_box)
 		triggered_signal.emit(trigger_id)
 
 func _show_dialogue(dialogue_box) -> void:
@@ -32,7 +33,7 @@ func _show_dialogue(dialogue_box) -> void:
 	dialogue_box.hide()
 
 func _wait_for_input() -> void:
-	var timer = get_tree().create_timer(3.0)
+	var timer = get_tree().create_timer(5.0)
 	while not Input.is_action_just_pressed("skip typing"):
 		if timer.time_left <= 0:
 			break
