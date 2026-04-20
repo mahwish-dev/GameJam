@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ca00h80jcw71d"]
 
+[ext_resource type="Script" uid="uid://cvjxe17vo1jjo" path="res://scripts/level_2.gd" id="1_8g4ke"]
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_if4l3"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="2_4038r"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_4038r"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cmxmtpxxbklok" path="res://scenes/score.tscn" id="8_hrcei"]
 [ext_resource type="PackedScene" uid="uid://dtfb0227pc45q" path="res://scenes/dialogue_box.tscn" id="8_xa7n4"]
 [ext_resource type="PackedScene" uid="uid://c05y8106ujmfm" path="res://scenes/day_background.tscn" id="10_bo4dx"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="12_56gwk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k3dv"]
 texture = ExtResource("1_if4l3")
@@ -251,6 +253,7 @@ _data = {
 }
 
 [node name="Level2" type="Node2D" unique_id=1926555199]
+script = ExtResource("1_8g4ke")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=579195076]
 tile_set = SubResource("TileSet_alqfr")
@@ -366,3 +369,5 @@ position = Vector2(603, -107)
 
 [node name="DayBackground" parent="." unique_id=1197791785 instance=ExtResource("10_bo4dx")]
 position = Vector2(92.25987, -11.23415)
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("12_56gwk")]

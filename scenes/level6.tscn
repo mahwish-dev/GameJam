@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c5canwkprs1lt" path="res://scripts/old_man_cutscene.gd" id="1_nfb5x"]
 [ext_resource type="Texture2D" uid="uid://wy7h6sxd3d03" path="res://assets/sprites/home/PNG/Interior.png" id="1_r3dln"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="2_3qbet"]
 [ext_resource type="Texture2D" uid="uid://cxtdmaxjoys0n" path="res://assets/sprites/home/PNG/walls_floor.png" id="2_nfb5x"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_1poj1"]
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="4_kkva1"]
 [ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="6_gqfhf"]
-[ext_resource type="PackedScene" path="res://scenes/oldman.tscn" id="6_r3dln"]
+[ext_resource type="PackedScene" uid="uid://c4w60cxf50uv1" path="res://scenes/oldman.tscn" id="6_r3dln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a44w3"]
 texture = ExtResource("1_r3dln")
@@ -384,6 +385,8 @@ sources/2 = SubResource("TileSetAtlasSource_v7ydk")
 
 [node name="OldManCutscene" type="Node2D" unique_id=190481095]
 script = ExtResource("1_nfb5x")
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("2_3qbet")]
 
 [node name="TileMap2" type="TileMap" parent="." unique_id=111138129]
 tile_set = SubResource("TileSet_8jg3x")

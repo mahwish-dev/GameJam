@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://1rmafaahyary"]
 
+[ext_resource type="Script" uid="uid://cdnyafoxp2ayt" path="res://scripts/level_7.gd" id="1_72klc"]
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_djf6h"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="1_v3b64"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_rdkg4"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="3_v3b64"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="4_72klc"]
@@ -175,6 +177,9 @@ sources/0 = SubResource("TileSetAtlasSource_qewby")
 distance = -54.0
 
 [node name="Node2D" type="Node2D" unique_id=1390614243]
+script = ExtResource("1_72klc")
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("1_v3b64")]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=430601072]
 tile_set = SubResource("TileSet_bradm")

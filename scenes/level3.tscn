@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ct5xf5ip4cflq"]
 
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_im88e"]
+[ext_resource type="Script" uid="uid://b71j7ykdt6dtn" path="res://scripts/level_4.gd" id="1_qewby"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_vxn4p"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="3_5cjb5"]
 [ext_resource type="PackedScene" uid="uid://cnikuho61tgcm" path="res://scenes/check_point.tscn" id="4_q6sfj"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="8_0wxwt"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="9_5tkub"]
 [ext_resource type="PackedScene" uid="uid://c05y8106ujmfm" path="res://scenes/day_background.tscn" id="10_6qt4k"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="12_bradm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2k3dv"]
 texture = ExtResource("1_im88e")
@@ -177,6 +179,7 @@ sources/0 = SubResource("TileSetAtlasSource_2k3dv")
 distance = -54.0
 
 [node name="Level4" type="Node2D" unique_id=905673854]
+script = ExtResource("1_qewby")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=579195076]
 tile_set = SubResource("TileSet_alqfr")
@@ -289,3 +292,5 @@ position = Vector2(791, -118)
 position = Vector2(900, -72)
 
 [node name="DayBackground" parent="." unique_id=1197791785 instance=ExtResource("10_6qt4k")]
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("12_bradm")]

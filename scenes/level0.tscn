@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="6_wetln"]
 [ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="7_ooohs"]
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="8_pnrra"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="8_wrnl3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oktqt"]
 texture = ExtResource("2_tcqsn")
@@ -200,3 +201,5 @@ zoom = Vector2(4, 4)
 
 [node name="Portal" parent="." unique_id=1307874585 instance=ExtResource("8_pnrra")]
 position = Vector2(690, 34)
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("8_wrnl3")]

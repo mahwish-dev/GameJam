@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="1_6lxtr"]
 [ext_resource type="Script" uid="uid://d0fvivp7w51fx" path="res://scripts/level_5.gd" id="1_v4gm1"]
+[ext_resource type="PackedScene" uid="uid://3s67pxobfy07" path="res://scenes/level_music.tscn" id="2_54swg"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="2_b72m1"]
 [ext_resource type="PackedScene" uid="uid://cf3jky6xi6f1b" path="res://scenes/platform.tscn" id="3_5mhml"]
 [ext_resource type="PackedScene" uid="uid://bsiot8o0bnp2g" path="res://scenes/killzone.tscn" id="4_rupth"]
@@ -179,6 +180,8 @@ distance = -54.0
 
 [node name="Node2D" type="Node2D" unique_id=1390614243]
 script = ExtResource("1_v4gm1")
+
+[node name="AudioStreamPlayer2D" parent="." unique_id=864771381 instance=ExtResource("2_54swg")]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=430601072]
 tile_set = SubResource("TileSet_bradm")

@@ -3,11 +3,13 @@ extends Node
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var camera = player.get_node("Camera2D")
 @onready var dialogue_box = get_tree().current_scene.get_node("Overlay/DialogueBox")
+@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var is_playing = false
 
 func _ready() -> void:
 	await get_tree().process_frame
+	music.play()
 	play_cutscene()
 
 func say(speaker: String, text: String) -> void:

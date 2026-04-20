@@ -4,6 +4,7 @@ extends Node
 @onready var kid: CharacterBody2D = $Kid
 @onready var kid_2: CharacterBody2D = $Kid2
 @onready var kid_3: CharacterBody2D = $Kid3
+@onready var music: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var is_playing = false
 
@@ -15,7 +16,7 @@ func _ready() -> void:
 	# Connect trigger
 	for trigger in get_tree().get_nodes_in_group("trigger"):
 		trigger.triggered_signal.connect(_on_trigger)
-	
+	music.play()
 	play_cutscene()
 
 func _on_trigger(trigger_id: String) -> void:

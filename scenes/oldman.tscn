@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://vckeubq2bwye"]
+[gd_scene format=3 uid="uid://c4w60cxf50uv1"]
 
 [ext_resource type="Texture2D" uid="uid://xketvnkf25da" path="res://assets/sprites/candy-guy.png" id="1_qi51s"]
 
@@ -42,4 +42,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=549748683]
 sprite_frames = SubResource("SpriteFrames_lm6lv")
-frame_progress = 0.45964366
+autoplay = "default"
+frame_progress = 0.37511247

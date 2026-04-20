@@ -8,6 +8,7 @@ extends Node
 @onready var kid_2: CharacterBody2D = $Kid2
 @onready var kid_3: CharacterBody2D = $Kid3
 @onready var kid_4: CharacterBody2D = $Kid4
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var is_playing = false
 
@@ -15,6 +16,7 @@ var is_playing = false
 
 func _ready() -> void:
 	await get_tree().process_frame
+	audio_stream_player_2d.play()
 	
 	play_cutscene()
 

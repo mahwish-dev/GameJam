@@ -5,12 +5,14 @@ extends Node
 @onready var kid_3: CharacterBody2D = $Kid3
 var is_playing = false
 @onready var dialogue_box = get_tree().current_scene.get_node("Overlay/DialogueBox")
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	await get_tree().process_frame
 	kid.visible = false
 	kid_2.visible = false
 	kid_3.visible = false
+	audio_stream_player_2d.play()
 	for trigger in get_tree().get_nodes_in_group("trigger"):
 		trigger.triggered_signal.connect(_on_trigger)
 
@@ -51,8 +53,13 @@ func _cutscene_1() -> void:
 
 	# Opening dialogue
 	await say("Player", "That old man was saying some really strange things back there...")
+	await get_tree().create_timer(0.3).timeout
+
 	await say("Guide", "His mind is just going sour in his old age. We should visit that nice lady again.")
+	await get_tree().create_timer(0.3).timeout
+	
 	await say("Player", "Actually, that makes me wonder... how come everyone here looks different from you? Where are the rest of the adults from your species?")
+	await get_tree().create_timer(0.3).timeout
 	await say("Guide", "Oh, we're, uh... a very solitary people. Yes. Very private.")
 
 	# Kids dart across the screen
