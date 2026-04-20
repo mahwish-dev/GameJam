@@ -55,7 +55,7 @@ func play_cutscene() -> void:
 	player.get_node("AnimatedSprite2D").play("idle")
 
 	# Guide voiceover tutorial tip
-	await say("Guide", "Press A and D (or Arrow Keys) to move, and Spacebar to jump. Collect coins to help King [King Name] bring prosperity to [Realm Name]!")
+	await say("Guide", "Press A and D (or Arrow Keys) to move, and Spacebar to jump. Collect coins to help King Cane bring prosperity to Sugarcube Pastures!")
 
 	# Hand control back — player can now move freely until they hit the trigger
 	player.is_dead = false

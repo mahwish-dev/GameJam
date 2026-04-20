@@ -67,20 +67,20 @@ func play_cutscene() -> void:
 	# Guide gestures grandly
 	await get_tree().create_timer(0.3).timeout
 
-	# Guide: "Welcome to [Realm Name]!"
-	await say("Guide", "Welcome to [Realm Name]!")
+	# Guide: "Welcome to Sugarcube Pastures!"
+	await say("Guide", "Welcome to Sugarcube Pastures!")
 
 	# Player confused pause
 	await get_tree().create_timer(0.5).timeout
 
-	# Player: "...[Realm Name]?"
-	await say("Player", "...[Realm Name]?")
+	# Player: "...Sugarcube Pastures?"
+	await say("Player", "...Sugarcube Pastures?")
 
 	# Guide steps forward enthusiastically
 	await move_character(guide, Vector2(guide.global_position.x + 30, guide.global_position.y), 0.5)
 
 	# Guide: "A utopia for all candyfolk!..."
-	await say("Guide", "A utopia for all candyfolk! Ruled by the magnificent King [King Name]. You look a bit dazed, let me show you around.")
+	await say("Guide", "A utopia for all candyfolk! Ruled by the magnificent King Cane. You look a bit dazed, let me show you around.")
 
 	# Guide starts walking, player follows
 	await get_tree().create_timer(0.5).timeout

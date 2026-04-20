@@ -95,8 +95,8 @@ func play_cutscene() -> void:
 	await say('Guide', '"(Sighs heavily) You really shouldn\'t have dug into this..."')
 
 	# Guide long exposition
-	await say('Guide', '"The truth is, [Realm Name] is no utopia."')
-	await say('Guide', '"King [King Name] came to power by enslaving my people."')
+	await say('Guide', '"The truth is, Sugarcube Pastures is no utopia."')
+	await say('Guide', '"King Cane came to power by enslaving my people."')
 	await say('Guide', '"He exploits our labor to feed his own kind on the surface."')
 	await say('Guide', '"And those golems? They aren\'t monsters."')
 	await say('Guide', '"They\'ve been the protectors of our underground tribe for centuries."')
@@ -113,7 +113,7 @@ func play_cutscene() -> void:
 	await get_tree().create_timer(1.0).timeout
 
 	# Guide: "Because every time..."
-	await say('Guide', '"Because every time a visitor stumbles into our world, I am forced to recruit them. If I don\'t do his bidding... King [King Name] will melt my family down."')
+	await say('Guide', '"Because every time a visitor stumbles into our world, I am forced to recruit them. If I don\'t do his bidding... King Cane will melt my family down."')
 
 	# Guide: "I am so sorry..."
 	await say('Guide', '"I am so sorry, kid. I really didn\'t want it to come to this."')

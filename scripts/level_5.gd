@@ -65,7 +65,7 @@ func _golem_defeated() -> void:
 	player.get_node("HealthBarContainer").hide()
 
 	await say("Player", "Uh... that golem.. it didn't really look like it's 'sleeping'. It looked kind of dead.")
-	await say("Guide", "Ah, it's just taking a very deep nap. Oh, it dropped chocolate! King [King Name] highly rewards those who bring him chocolate!")
+	await say("Guide", "Ah, it's just taking a very deep nap. Oh, it dropped chocolate! King Cane highly rewards those who bring him chocolate!")
 
 	player.is_dead = false
 	player.set_process(true)

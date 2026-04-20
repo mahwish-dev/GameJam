@@ -49,11 +49,11 @@ func play_cutscene() -> void:
 	
 	await get_tree().create_timer(0.3).timeout
 	
-	await say("Candy Grandma", "We are just so thankful you're here helping our\nkind and fair King [King Name].")
+	await say("Candy Grandma", "We are just so thankful you're here helping our\nkind and fair King Cane.")
 	
 	await get_tree().create_timer(0.3).timeout
 	
-	await say("Candy Grandma", "He works so hard to bring happiness and\nfreedom to [Realm Name].")
+	await say("Candy Grandma", "He works so hard to bring happiness and\nfreedom to Sugarcube Pastures.")
 	
 	await get_tree().create_timer(0.3).timeout
 	
