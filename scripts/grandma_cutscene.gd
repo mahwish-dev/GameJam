@@ -55,7 +55,7 @@ func play_cutscene() -> void:
 	
 	await get_tree().create_timer(0.3).timeout
 	
-	await say("Candy Grandma", "It must be an awfully heavy burden for him,\nrunning this whole utopia all by himself.\nI'm just glad he finally has a spry young helper like you!")
+	await say("Candy Grandma", "It must be an awfully heavy burden for him, running this whole utopia\nall by himself. I'm glad he has a spry young helper like you!")
 
 	# End Cutscene
 	if "is_dead" in player:

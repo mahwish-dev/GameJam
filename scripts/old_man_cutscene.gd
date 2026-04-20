@@ -51,7 +51,7 @@ func play_cutscene() -> void:
 	
 	await get_tree().create_timer(0.3).timeout
 	
-	await say("Old Man", "Never mind. (Sniffs the air) I smell chocolate. Been slaughtering those poor golems, have you?")
+	await say("Old Man", "Never mind. (Sniffs the air) I smell chocolate. Been\nslaughtering those poor golems, have you?")
 	
 	await get_tree().create_timer(0.3).timeout
 	
@@ -67,7 +67,7 @@ func play_cutscene() -> void:
 
 	await get_tree().create_timer(0.3).timeout
 	
-	await say("Old Man", "Nothing. Just... don't ask too many questions, kid. Keep your head down and stay safe.")
+	await say("Old Man", "Nothing. Just... don't ask too many questions, kid.\nKeep your head down and stay safe.")
 
 	await get_tree().create_timer(0.3).timeout
 	

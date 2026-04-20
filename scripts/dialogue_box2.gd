@@ -11,6 +11,6 @@ func display_line(str: String):
 	for char in str:
 		if is_typing:
 			text_label.text += char
-			await get_tree().create_timer(0.05).timeout
+			await get_tree().create_timer(0.01).timeout
 	is_typing = false
 	
