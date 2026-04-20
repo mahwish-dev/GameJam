@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxtdmaxjoys0n" path="res://assets/sprites/home/PNG/walls_floor.png" id="2_il7bs"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_6a70b"]
 [ext_resource type="PackedScene" uid="uid://bo8efsokpgvpo" path="res://scenes/portal.tscn" id="4_4dnfe"]
-[ext_resource type="PackedScene" uid="uid://dehfe5ypu1xqy" path="res://scenes/grandma.tscn" id="5_il7bs"]
+[ext_resource type="PackedScene" path="res://scenes/grandma.tscn" id="5_il7bs"]
 [ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="7_4dnfe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dnfe"]
