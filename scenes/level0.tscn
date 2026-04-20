@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ctyib7i6mopv7" path="res://scripts/starting_cutscene.gd" id="1_wrnl3"]
 [ext_resource type="Texture2D" uid="uid://df57ujw0uqbiq" path="res://assets/sprites/world_tileset.png" id="2_tcqsn"]
 [ext_resource type="Texture2D" uid="uid://cxb6bvfx7fihq" path="res://assets/sprites/day background.png" id="3_6q6d4"]
-[ext_resource type="PackedScene" uid="uid://cibdwssymquub" path="res://scenes/kid.tscn" id="4_l3elg"]
 [ext_resource type="PackedScene" uid="uid://xjt0nq2pfdwo" path="res://scenes/chocolate_guide.tscn" id="5_6hrqr"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="6_wetln"]
 [ext_resource type="PackedScene" uid="uid://f1vtq2n8083d" path="res://scenes/overlay.tscn" id="7_ooohs"]
@@ -187,22 +186,6 @@ z_index = -1
 position = Vector2(619.0001, 269)
 scale = Vector2(0.6247241, 0.491453)
 texture = ExtResource("3_6q6d4")
-
-[node name="Kid" parent="." unique_id=1817673989 instance=ExtResource("4_l3elg")]
-position = Vector2(476, 33)
-scale = Vector2(0.7, 0.7)
-
-[node name="Kid2" parent="." unique_id=796381861 instance=ExtResource("4_l3elg")]
-position = Vector2(541.9999, 33)
-scale = Vector2(0.7, 0.7)
-
-[node name="Kid3" parent="." unique_id=1721680039 instance=ExtResource("4_l3elg")]
-position = Vector2(524.9999, 33)
-scale = Vector2(0.7, 0.7)
-
-[node name="Kid4" parent="." unique_id=379838334 instance=ExtResource("4_l3elg")]
-position = Vector2(508.9999, 33)
-scale = Vector2(0.7, 0.7)
 
 [node name="Guide" parent="." unique_id=867849128 instance=ExtResource("5_6hrqr")]
 position = Vector2(114, 29)

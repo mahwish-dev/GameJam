@@ -1,6 +1,7 @@
 extends Control
 
 @onready var text_label: RichTextLabel = $Panel/RichTextLabel
+@onready var panel: Panel = $Panel
 
 var is_typing = false
 

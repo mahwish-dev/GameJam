@@ -2,6 +2,7 @@ extends Node
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var guide = get_tree().current_scene.get_node("Guide")
+@onready var golem = get_tree().current_scene.get_node("IronGolem")
 @onready var camera = player.get_node("Camera2D")
 @onready var kid: CharacterBody2D = $Kid
 @onready var kid_2: CharacterBody2D = $Kid2
@@ -14,6 +15,7 @@ var is_playing = false
 
 func _ready() -> void:
 	await get_tree().process_frame
+	
 	play_cutscene()
 
 func say(speaker: String, text: String) -> void:
@@ -44,6 +46,7 @@ func play_cutscene() -> void:
 	player.set_process(false)
 	player.set_physics_process(false)
 	player.get_node("HealthBarContainer").hide()
+	golem.get_node("HealthBarContainer").hide()
 
 	# Enter the scene — player walks in
 	await get_tree().create_timer(1.0).timeout

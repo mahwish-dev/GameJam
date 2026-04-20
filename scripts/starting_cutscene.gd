@@ -84,24 +84,24 @@ func play_cutscene() -> void:
 	await get_tree().create_timer(0.5).timeout
 	move_character(guide, Vector2(350, guide.global_position.y), 3.0)
 	await move_character(player, Vector2(320, player.global_position.y), 3.0)
-
-	# Brief pause before kids run
-	await get_tree().create_timer(0.3).timeout
-	guide.get_node("AnimatedSprite2D").play("idle")
-	player.get_node("AnimatedSprite2D").play("idle")
-
-	# Kids run across staggered
-	var far_left = player.global_position.x - 500
-	move_character(kid, Vector2(far_left, kid.global_position.y), 4.0)
-	await get_tree().create_timer(0.2).timeout
-	move_character(kid_2, Vector2(far_left, kid_2.global_position.y), 4.0)
-	await get_tree().create_timer(0.2).timeout
-	move_character(kid_3, Vector2(far_left, kid_3.global_position.y), 4.0)
-	await get_tree().create_timer(0.2).timeout
-	await move_character(kid_4, Vector2(far_left, kid_4.global_position.y), 4.0)
-
-	# Brief pause after kids pass
-	await get_tree().create_timer(0.5).timeout
+#
+	## Brief pause before kids run
+	#await get_tree().create_timer(0.3).timeout
+	#guide.get_node("AnimatedSprite2D").play("idle")
+	#player.get_node("AnimatedSprite2D").play("idle")
+#
+	## Kids run across staggered
+	#var far_left = player.global_position.x - 500
+	#move_character(kid, Vector2(far_left, kid.global_position.y), 4.0)
+	#await get_tree().create_timer(0.2).timeout
+	#move_character(kid_2, Vector2(far_left, kid_2.global_position.y), 4.0)
+	#await get_tree().create_timer(0.2).timeout
+	#move_character(kid_3, Vector2(far_left, kid_3.global_position.y), 4.0)
+	#await get_tree().create_timer(0.2).timeout
+	#await move_character(kid_4, Vector2(far_left, kid_4.global_position.y), 4.0)
+#
+	## Brief pause after kids pass
+	#await get_tree().create_timer(0.5).timeout
 
 	# Continue walking
 	move_character(guide, Vector2(720, guide.global_position.y), 7.5)
