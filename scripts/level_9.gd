@@ -93,9 +93,12 @@ func play_cutscene() -> void:
 	await say('Guide', '"(Sighs heavily) You really shouldn\'t have dug into this..."')
 
 	# Guide long exposition
-	await say('Guide', '"The truth is, [Realm Name] is no utopia. King [King Name] came to power by enslaving my people. He exploits our labor to feed his own kind on the surface."')
-	await say('Guide', '"And those golems? They aren\'t monsters. They\'ve been the protectors of our underground tribe for centuries. Now, they\'re hunted down just to harvest their chocolate."')
-
+	await say('Guide', '"The truth is, [Realm Name] is no utopia."')
+	await say('Guide', '"King [King Name] came to power by enslaving my people."')
+	await say('Guide', '"He exploits our labor to feed his own kind on the surface."')
+	await say('Guide', '"And those golems? They aren\'t monsters."')
+	await say('Guide', '"They\'ve been the protectors of our underground tribe for centuries."')
+	await say('Guide', '"Now, they\'re hunted down just to harvest their chocolate."')
 	# Player steps back shocked
 	move_character(player, Vector2(350, player.global_position.y), 0.8)
 	await move_character(guide, Vector2(330, guide.global_position.y), 1.0)
