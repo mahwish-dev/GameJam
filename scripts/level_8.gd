@@ -25,21 +25,21 @@ func say(speaker: String, text: String) -> void:
 	dialogue_box.show()
 	dialogue_box.get_node("Panel/Label").text = speaker
 	await dialogue_box.display_line(text)
-	#await _wait_for_input()
+	await _wait_for_input()
 	dialogue_box.hide()
 
-#func _wait_for_input() -> void:
-	#if dialogue_box.is_typing:
-		#while not Input.is_action_just_pressed("skip typing"):
-			#await get_tree().process_frame
-		#dialogue_box.skip_typing()
-		#await get_tree().process_frame
-		#return
-	#var timer = get_tree().create_timer(5.0)
-	#while not Input.is_action_just_pressed("skip typing"):
-		#if timer.time_left <= 0:
-			#break
-		#await get_tree().process_frame
+func _wait_for_input() -> void:
+	if dialogue_box.is_typing:
+		while not Input.is_action_just_pressed("skip typing"):
+			await get_tree().process_frame
+		dialogue_box.skip_typing()
+		await get_tree().process_frame
+		return
+	var timer = get_tree().create_timer(5.0)
+	while not Input.is_action_just_pressed("skip typing"):
+		if timer.time_left <= 0:
+			break
+		await get_tree().process_frame
 
 func _cutscene_1() -> void:
 	if is_playing:

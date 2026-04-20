@@ -2,9 +2,11 @@ extends Node
 @onready var player = get_tree().get_first_node_in_group("player")
 var is_playing = false
 @onready var dialogue_box = get_tree().current_scene.get_node("Overlay/DialogueBox")
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	await get_tree().process_frame
+	audio_stream_player_2d.play()
 	
 	for trigger in get_tree().get_nodes_in_group("trigger"):
 		trigger.triggered_signal.connect(_on_trigger)
@@ -49,6 +51,7 @@ func play_cutscene() -> void:
 	player.get_node("AnimatedSprite2D").play("idle")
 
 	await say("Guide", "Careful now! That's a hostile golem. They're violent menaces to all candyfolk. Jump and attack it to deplete its health, that'll put it right to sleep.")
+	await say("Guide", "Attack by pressing J")
 
 	player.is_dead = false
 	player.set_process(true)
