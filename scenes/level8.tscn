@@ -258,3 +258,4 @@ position = Vector2(1433, -189)
 [node name="Overlay" parent="." unique_id=1832993209 instance=ExtResource("11_604nx")]
 
 [node name="DayBackground" parent="." unique_id=1197791785 instance=ExtResource("12_udt74")]
+position = Vector2(311, 4)
