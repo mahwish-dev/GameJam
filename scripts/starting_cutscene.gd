@@ -10,9 +10,31 @@ extends Node
 
 var is_playing = false
 
+@onready var dialogue_box = get_tree().current_scene.get_node("Overlay/DialogueBox")
+
 func _ready() -> void:
 	await get_tree().process_frame
 	play_cutscene()
+
+func say(speaker: String, text: String) -> void:
+	dialogue_box.show()
+	dialogue_box.get_node("Panel/Label").text = speaker
+	await dialogue_box.display_line(text)
+	await _wait_for_input()
+	dialogue_box.hide()
+
+func _wait_for_input() -> void:
+	if dialogue_box.is_typing:
+		while not Input.is_action_just_pressed("skip typing"):
+			await get_tree().process_frame
+		dialogue_box.skip_typing()
+		await get_tree().process_frame
+		return
+	var timer = get_tree().create_timer(5.0)
+	while not Input.is_action_just_pressed("skip typing"):
+		if timer.time_left <= 0:
+			break
+		await get_tree().process_frame
 
 func play_cutscene() -> void:
 	is_playing = true
@@ -20,24 +42,55 @@ func play_cutscene() -> void:
 	player.set_physics_process(false)
 	guide.set_process(false)
 	guide.set_physics_process(false)
+	player.is_dead = true
 	player.get_node("HealthBarContainer").hide()
 
-	await get_tree().create_timer(10).timeout
-	guide.get_node("AnimatedSprite2D").play("idle")
+	# Player wakes up/spawns — brief pause
+	await get_tree().create_timer(1.5).timeout
 	player.get_node("AnimatedSprite2D").play("idle")
-	
-	# Guide and player walk to spot
+	guide.get_node("AnimatedSprite2D").play("idle")
+
+	# Guide walks toward player
+	await move_character(guide, Vector2(player.global_position.x + 60, guide.global_position.y), 2.0)
+
+	# Guide: "Well, hello there, traveler!"
+	await say("Guide", "Well, hello there, traveler!")
+
+	# Player looks around confused
+	await get_tree().create_timer(0.5).timeout
+
+	# Player: "Wait, where am I?"
+	await say("Player", "Wait, where am I? How did I even get here?")
+
+	# Guide gestures grandly
+	await get_tree().create_timer(0.3).timeout
+
+	# Guide: "Welcome to [Realm Name]!"
+	await say("Guide", "Welcome to [Realm Name]!")
+
+	# Player confused pause
+	await get_tree().create_timer(0.5).timeout
+
+	# Player: "...[Realm Name]?"
+	await say("Player", "...[Realm Name]?")
+
+	# Guide steps forward enthusiastically
+	await move_character(guide, Vector2(guide.global_position.x + 30, guide.global_position.y), 0.5)
+
+	# Guide: "A utopia for all candyfolk!..."
+	await say("Guide", "A utopia for all candyfolk! Ruled by the magnificent King [King Name]. You look a bit dazed, let me show you around.")
+
+	# Guide starts walking, player follows
+	await get_tree().create_timer(0.5).timeout
 	move_character(guide, Vector2(350, guide.global_position.y), 3.0)
 	await move_character(player, Vector2(320, player.global_position.y), 3.0)
 
 	# Brief pause before kids run
 	await get_tree().create_timer(0.3).timeout
-
-	# Player and guide stop and watch
 	guide.get_node("AnimatedSprite2D").play("idle")
 	player.get_node("AnimatedSprite2D").play("idle")
 
-	# Kids run across staggered — run far to the right off screen
+	# Kids run across staggered
 	var far_left = player.global_position.x - 500
 	move_character(kid, Vector2(far_left, kid.global_position.y), 4.0)
 	await get_tree().create_timer(0.2).timeout
@@ -46,7 +99,7 @@ func play_cutscene() -> void:
 	move_character(kid_3, Vector2(far_left, kid_3.global_position.y), 4.0)
 	await get_tree().create_timer(0.2).timeout
 	await move_character(kid_4, Vector2(far_left, kid_4.global_position.y), 4.0)
-	
+
 	# Brief pause after kids pass
 	await get_tree().create_timer(0.5).timeout
 
@@ -55,13 +108,14 @@ func play_cutscene() -> void:
 	await move_character(player, Vector2(700, player.global_position.y), 7.5)
 
 	# Done
+	player.is_dead = false
 	player.set_process(true)
 	player.set_physics_process(true)
 	guide.set_process(true)
 	guide.set_physics_process(true)
 	player.get_node("HealthBarContainer").show()
 	is_playing = false
-	
+
 func move_character(character, target: Vector2, duration: float) -> void:
 	var sprite = character.get_node("AnimatedSprite2D")
 	var dir = target.x - character.global_position.x

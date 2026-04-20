@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://tfdmuomfxwvt" path="res://scripts/dialogue_box2.gd" id="1_rc1id"]
 [ext_resource type="FontFile" uid="uid://dfd0c0e0xg0yf" path="res://assets/fonts/PixelOperator8.ttf" id="2_tm68y"]
 [ext_resource type="FontFile" uid="uid://52x218xb816c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_hvmm2"]
-[ext_resource type="Texture2D" uid="uid://b57mt6uol23sq" path="res://assets/sprites/menu - Large H resized.png" id="4_hvmm2"]
 
 [node name="DialogueBox" type="Control" unique_id=1305888784]
 layout_mode = 3
@@ -28,12 +27,11 @@ grow_vertical = 0
 [node name="Label" type="Label" parent="Panel" unique_id=964373010]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 6.0
+offset_top = 15.0
 offset_right = 827.0
-offset_bottom = 55.0
+offset_bottom = 64.0
 theme_override_fonts/font = ExtResource("2_tm68y")
-text = "Guide Character
-"
+theme_override_font_sizes/font_size = 24
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1734588937]
 layout_mode = 0
@@ -46,9 +44,3 @@ theme_override_fonts/bold_font = ExtResource("3_hvmm2")
 bbcode_enabled = true
 text = "
 "
-
-[node name="MenuLargeHResized" type="Sprite2D" parent="Panel" unique_id=1652526547]
-z_index = -1
-position = Vector2(583.5448, -107.87501)
-scale = Vector2(9.329923, 9.705224)
-texture = ExtResource("4_hvmm2")
